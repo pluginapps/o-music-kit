@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PuruSid Guitar</title>
+    <style>
+        svg {
+            width: 100%;
+            margin: 0;
+        }
+
+        line {
+            border: 0;
+            margin: 0;
+        }
+
+        .guitar {
+            position: relative;
+            width: 100%;
+            z-index: 0;
+        }
+
+        td {
+            border: 0;
+            margin: 0;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            z-index: -300;
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        svg>line {
+            stroke: #a59c94;
+            stroke-width: 10;
+        }
+    </style>
+</head>
+
+<body bgcolor="#1e150e" text="white">
+    <table cellspacing="0" cellpadding="0" class="guitar">
+        <tr>
+            <td>
+                <svg onclick="one.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="two.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="three.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="four.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="five.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <svg onclick="q.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="w.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="e.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="r.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="t.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <svg onclick="a.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="s.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="d.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="f.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="g.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <svg onclick="z.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="lex.play();">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="c.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="v.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+            <td>
+                <svg onclick="b.play()">
+                    <line x1="5" y1="5" x2="100%" y2="5">
+                </svg>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var one = new Audio('sound/s1f0.mp3');
+        var two = new Audio('sound/s1f1.mp3');
+        var three = new Audio('sound/s1f2.mp3');
+        var four = new Audio('sound/s1f3.mp3');
+        var five = new Audio('sound/s1f4.mp3');
+        var q = new Audio('sound/s2f0.mp3');
+        var w = new Audio('sound/s2f1.mp3');
+        var e = new Audio('sound/s2f2.mp3');
+        var r = new Audio('sound/s2f3.mp3');
+        var t = new Audio('sound/s2f4.mp3');
+        var a = new Audio('sound/s3f0.mp3');
+        var s = new Audio('sound/s3f1.mp3');
+        var d = new Audio('sound/s3f2.mp3');
+        var f = new Audio('sound/s3f3.mp3');
+        var g = new Audio('sound/s3f4.mp3');
+        var z = new Audio('sound/s4f0.mp3');
+        var lex = new Audio('sound/s4f1.mp3');
+        var c = new Audio('sound/s4f2.mp3');
+        var v = new Audio('sound/s4f3.mp3');
+        var b = new Audio('sound/s4f4.mp3');
+        window.addEventListener('keypress', function (keypress) {
+            key = keypress.code
+
+            if (key == "Digit1") {
+                one.play()
+            }
+            if (key == "Digit2") {
+                two.play()
+            }
+            if (key == "Digit3") {
+                three.play()
+            }
+            if (key == "Digit4") {
+                four.play()
+            }
+            if (key == "Digit5") {
+                five.play()
+            }
+            if (key == "KeyQ") {
+                q.play();
+            }
+            if (key == "KeyW") {
+                w.play();
+            }
+            if (key == "KeyE") {
+                e.play();
+            }
+            if (key == "KeyR") {
+                r.play();
+            }
+            if (key == "KeyT") {
+                t.play();
+            }
+            if (key == "KeyA") {
+                a.play();
+            }
+            if (key == "KeyS") {
+                s.play();
+            }
+            if (key == "KeyD") {
+                d.play();
+            }
+            if (key == "KeyF") {
+                f.play();
+            }
+            if (key == "KeyG") {
+                g.play();
+            }
+            if (key == "KeyZ") {
+                z.play();
+            }
+            if (key == "KeyX") {
+                lex.play();
+            }
+            if (key == "KeyC") {
+                c.play();
+            }
+            if (key == "KeyV") {
+                v.play();
+            }
+            if (key == "KeyB") {
+                b.play();
+            }
+
+        });
+    </script>
+</body>
+
+</html>
